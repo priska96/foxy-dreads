@@ -1,38 +1,267 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
+
+
+.underline {
+    text-decoration: underline;
+}
+
+/*** COLORS **/
+.light-yellow {
+    color: #facc5c;
+}
+
+.yellow {
+    color: #ffbf27;
+}
+
+.light-orange {
+    color: #fb8136;
+}
+
+.orange {
+    color: #ea5101;
+}
+
+.brown {
+    color: #42353f;
+}
+
+.light-yellow-bg {
+    background-color: #facc5c;
+}
+
+.yellow-bg {
+    background-color: #ffbf27;
+}
+
+.orange-bg {
+    background-color: #fb8136;
+}
+
+.orange-bg {
+    background-color: #ea5101;
+}
+
+.brown-bg {
+    background-color: #42353f;
+}
+
+.glow {
+    color: #fff;
+    font-size: 8rem;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 1rem #fff, 0 0 2rem #fff, 0 0 3rem #fb8136, 0 0 4rem #fb8136, 0 0 5rem #a3e6be, 0 0 6rem #a3e6be, 0 0 7rem #a3e6be;
+    }
+    to {
+        text-shadow: 0 0 2rem #fff, 0 0 3rem #facc5c, 0 0 4rem #facc5c, 0 0 5rem #facc5c, 0 0 6rem #abffb8, 0 0 7rem #abffb8, 0 0 8rem #abffb8;
+    }
+}
+
+.title {
+    font-family: 'Yellowtail', cursive;
+}
+
+.btn-loading {
+    border-color: #c8ded0;
+    color: #c8ded0;
+    background-image: linear-gradient(45deg, transparent 50%, #c8ded0 50%);
+    background-position: 25%;
+    background-size: 400%;
+    transition: background 500ms ease-in-out, color 500ms ease-in-out;
+}
+
+.btn-loading:hover {
+    color: white;
+    background-position: 90%;
+}
+
+/*** NAVIGATION ***/
+.anchor {
+    position: relative;
+    top: -100px;
+}
+
+.navigation {
+    margin: 0 0 100px;
+}
+
+nav.navbar {
+    height: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.nav-link {
+    font-weight: bold;
+}
+
+.navbar-toggler {
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 767.98px) {
+    .navbar-collapse > div.navbar-nav {
+        width: 150px;
+        background-color: #f8f9fa;
+        margin-left: auto;
+        margin-right: 0 !important;
+        border-top-left-radius: 5em;
+        border-bottom-left-radius: 5em;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2)) drop-shadow(0 6px 20px rgba(0, 0, 0, 0.19));
+    }
+
+    .navbar-collapse > div.navbar-nav a {
+        text-align: right !important;
+        padding-right: 1rem;
+    }
+}
+
+.navbar-brand {
+    margin-bottom: 12px;
+}
+
+.logo {
+    height: 70px;
+}
+
+.header {
+    max-height: 600px;
+
+}
+
+.our-concept {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.devider {
+    border-bottom: 1px solid white;
+    margin: 1.5rem 0 2rem;
+    width: 15%;
+    display: block;
+}
+
+/*** PRODUCTS ***/
+.product img {
+    height: 300px;
+}
+
+
+/*about me start*/
+div.AboutMe p {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+/*about me end*/
+/*contact start*/
+.highlight {
+    display: inline-block;
+    color: #42353f;
+    transition: color 250ms;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 1);
+    position: relative;
+    z-index: 0;
+}
+
+.highlight:after {
+    position: absolute;
+    z-index: -1;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #42353f;
+    transition: all 250ms;
+}
+
+.highlight:hover {
+    color: white;
+    /*text-shadow: 0px 1px 0px rgba(0, 0, 0, 1);*/
+}
+
+.highlight:hover:after {
+    height: 105%;
+    width: 105%;
+}
+
+.form-row .form-group {
+    width: 48%;
+}
+
+/*contact end*/
+
+/*footer start*/
+#go-top {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    transition: bottom 500ms ease-in-out, opacity 500ms ease-in-out;
+    opacity: 0.7;
+}
+
+#go-top a {
+    color: #42353f;
+    font-weight: bold;
+    background-color: #9e8b99;
+    border-radius: 1em;
+    width: 2rem;
+    display: block;
+    height: 2rem;
+    padding: 0 0.5rem;
+}
+
+#go-top:hover {
+    bottom: 1.5rem;
+    opacity: 1;
+}
+
+/*footer end*/
